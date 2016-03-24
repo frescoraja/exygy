@@ -62,5 +62,13 @@ gem 'quiet_assets'
 
 gem 'thin'
 
+group :development, :test do
+  gem 'better_errors'
+  gem 'binding_of_caller'
+  gem 'pry-rails'
+  gem 'awesome_print', require: "ap"
+end
+
+
 # use thin webserver
 # gem 'thin'

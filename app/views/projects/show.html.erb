@@ -3,7 +3,26 @@
 <p>
   <strong>Name:</strong>
   <%= @project.name %>
+  <%= link_to 'View Tasks', 'javascript:;', class: 'btn btn-default task-list-btn' %>
 </p>
+
 
 <%= link_to 'Edit', edit_project_path(@project) %> |
 <%= link_to 'Back', projects_path %>
+
+
+<script>
+  'use strict';
+  $(document).ready(function() {
+    var $taskListButton = $('.task-list-btn')[0],
+        projectTasks;
+
+    $taskListButton.on('click', toggleTaskList)
+
+    function toggleTaskList(event) {
+      event.preventDefault();
+
+
+    }
+  });
+</script>
