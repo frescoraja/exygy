@@ -3,6 +3,10 @@ class TasksController < ApplicationController
 
   def index
     @tasks = @project.tasks
+    respond_to do |format|
+      format.html
+      format.json { render json: @tasks }
+    end
   end
 
   def destroy
